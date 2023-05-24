@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/idHeader"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:background="@drawable/rectangle_bleu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/idLogoTexte"
+            android:layout_width="193dp"
+            android:layout_height="46dp"
+            android:contentDescription="@string/accueil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.263"
+            app:layout_constraintStart_toEndOf="@+id/idLogoVelo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533"
+            app:srcCompat="@drawable/logo_text" />
+
+        <ImageView
+            android:id="@+id/idLogoVelo"
+            android:layout_width="70dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.461"
+            app:srcCompat="@drawable/petitlogo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="#0F6F85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:menu="@menu/bottom_nev_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="411dp"
+        android:layout_height="613dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idHeader">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <View
+                android:id="@+id/idFondInfo"
+                android:layout_width="327dp"
+                android:layout_height="351dp"
+                android:background="@drawable/rounded_corner_gris_clair"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.505" />
+
+            <TextView
+                android:id="@+id/idTitre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profil"
+                android:textColor="#196985"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/idFondInfo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/idModifierMesInformations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Modifier mes informations"
+                android:textColor="#196985"
+                android:textSize="20sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toTopOf="@+id/idBgPrenom"
+                app:layout_constraintEnd_toEndOf="@+id/idFondInfo"
+                app:layout_constraintStart_toStartOf="@+id/idFondInfo"
+                app:layout_constraintTop_toTopOf="@+id/idFondInfo"
+                app:layout_constraintVertical_bias="0.227" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/idBgVehicule"
+                android:layout_width="315dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/btn_bg_blanc"
+                app:layout_constraintBottom_toBottomOf="@+id/idFondInfo"
+                app:layout_constraintEnd_toEndOf="@+id/idFondInfo"
+                app:layout_constraintStart_toStartOf="@+id/idFondInfo">
+
+                <EditText
+                    android:id="@+id/idTelephone"
+                    android:layout_width="241dp"
+                    android:layout_height="37dp"
+                    android:hint="Telephone"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/idBgNom"
+                android:layout_width="155dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="1dp"
+                android:background="@drawable/btn_bg_blanc"
+                app:layout_constraintBottom_toTopOf="@+id/idBgEmail"
+                app:layout_constraintEnd_toStartOf="@+id/idBgPrenom"
+                app:layout_constraintStart_toStartOf="@+id/idFondInfo"
+                app:layout_constraintTop_toTopOf="@+id/idFondInfo"
+                app:layout_constraintVertical_bias="0.677">
+
+                <EditText
+                    android:id="@+id/idNom"
+                    android:layout_width="94dp"
+                    android:layout_height="39dp"
+                    android:hint="Nom"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.491"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/idBgPrenom"
+                android:layout_width="155dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/btn_bg_blanc"
+                app:layout_constraintBottom_toTopOf="@+id/idBgEmail"
+                app:layout_constraintEnd_toEndOf="@+id/idFondInfo"
+                app:layout_constraintTop_toTopOf="@+id/idFondInfo"
+                app:layout_constraintVertical_bias="0.677">
+
+                <EditText
+                    android:id="@+id/idPrenom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Prénom"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/idBgEmail"
+                android:layout_width="315dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/btn_bg_blanc"
+                app:layout_constraintBottom_toTopOf="@+id/idBgMdp"
+                app:layout_constraintEnd_toEndOf="@+id/idFondInfo"
+                app:layout_constraintStart_toStartOf="@+id/idFondInfo">
+
+                <EditText
+                    android:id="@+id/idEmail"
+                    android:layout_width="52dp"
+                    android:layout_height="36dp"
+                    android:hint="E-Mail"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/idBgMdp"
+                android:layout_width="315dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/btn_bg_blanc"
+                app:layout_constraintBottom_toTopOf="@+id/idBgVehicule"
+                app:layout_constraintEnd_toEndOf="@+id/idFondInfo"
+                app:layout_constraintStart_toStartOf="@+id/idFondInfo">
+
+                <EditText
+                    android:id="@+id/idMdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Mot de passe"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/idValider"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/valider"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/idFondInfo"
+                app:layout_constraintEnd_toEndOf="@+id/idFondInfo"
+                app:layout_constraintHorizontal_bias="0.678"
+                app:layout_constraintStart_toStartOf="@+id/idFondInfo"
+                app:layout_constraintTop_toBottomOf="@+id/idBgVehicule" />
+
+            <Button
+                android:id="@+id/idAnnuler"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/annuler"
+                app:layout_constraintBottom_toBottomOf="@+id/idFondInfo"
+                app:layout_constraintEnd_toStartOf="@+id/idValider"
+                app:layout_constraintStart_toStartOf="@+id/idFondInfo"
+                app:layout_constraintTop_toBottomOf="@+id/idBgVehicule" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
